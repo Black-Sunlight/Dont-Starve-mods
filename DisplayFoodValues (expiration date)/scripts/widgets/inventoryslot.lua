@@ -288,7 +288,7 @@ function ItemTile:OnMouseOver()
 		str = str.."\n" .. "Испортиться очень скоро"
 	    else
 		str = str.."\n" .. "Испортиться через " .. perishremainingtime .. " д"
-	    end   
+	    end 
 	    if perishremainingtime%10==0 or perishremainingtime%10>4 or perishremainingtime%100>10 and perishremainingtime%100<15 then
 		str = str .. "ней"
  	    elseif perishremainingtime%10==1 then
