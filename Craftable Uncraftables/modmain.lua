@@ -4,9 +4,9 @@ Recipe = GLOBAL.Recipe
 Ingredient = GLOBAL.Ingredient
 
 STRINGS.RECIPE_DESC.SILK = "Полная паучья благодать!"
-STRINGS.RECIPE_DESC.WALRUSHAT = "Если MacTusk может сделать это, это не должно быть настолько трудно!"
+STRINGS.RECIPE_DESC.WALRUSHAT = "Если Морж сумел, то и я сумею это сделать!"
 STRINGS.RECIPE_DESC.BUTTER = "Оно пахнет цветами!"
-STRINGS.RECIPE_DESC.LIVINGLOG = "Конечно я в своём уме! Когда Бревно говорит мне, я ему не отвечаю..."
+STRINGS.RECIPE_DESC.LIVINGLOG = "Конечно я в своём уме! Бревнам не отвечаю..."
 STRINGS.RECIPE_DESC.KRAMPUS_SACK = "Мне интересно, кому он принаджелал?"
 STRINGS.RECIPE_DESC.TRUNK_SUMMER = "Не очень толстые..."
 STRINGS.RECIPE_DESC.TRUNK_WINTER = "Хороший и тёплый!"
