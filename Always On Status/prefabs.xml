@@ -1,0 +1,9 @@
+<Prefabs>
+<Defs>
+<Prefab name='hud' pathname='UI/interface/hud' file='.\data\scripts\prefabs\hud.lua' desc=''>
+	<Assets>
+		<Asset  type='IMAGE' file='mods/Always On Status/images/status_bg.tex' flags='0' />
+	</Assets>
+</Prefab>
+</Defs>
+</Prefabs>
