@@ -22,10 +22,10 @@ function Curses:OnLoad(data)
 
 		--jcheng: very important to check when loading! Otherwise if you change your save format, you could crash the game
 		if cursedata ~= nil then
-			print("Р·Р°РіСЂСѓР·РєР° "..v:GetName())
+			print("загрузка "..v:GetName())
 			v:OnLoad(cursedata)
 		else
-			print("РЅРµРІРѕР·РјРѕР¶РЅРѕ Р·Р°РіСЂСѓР·РёС‚СЊ "..v:GetName())
+			print("невозможно загрузить "..v:GetName())
 		end
 	end
 end	
