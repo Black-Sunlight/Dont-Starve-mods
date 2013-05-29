@@ -16,21 +16,21 @@ end
 function Curse:BeginCurse()
 	TheFrontEnd:PushScreen(
 		GLOBAL.PopupDialogScreen(
-			"РќРѕРІРѕРµ РїСЂРѕРєР»СЏС‚РёРµ РїРѕСЃС‚РёРіР»Рѕ РІР°СЃ!", 
+			"Новое проклятие постигло вас!", 
 			self.desc,
 			{
-				{text="РЇ РїСЂРёРЅРёРјР°СЋ!", cb = function() self:Run() end},
-				{text="РќРµС‚! Р­С‚Рѕ СЃР»РёС€РєРѕРј С‚СЏР¶РµР»Рѕ!", cb = function() end}  
+				{text="Я принимаю!", cb = function() self:Run() end},
+				{text="Нет! Это слишком тяжело!", cb = function() end}  
 			}))
 end
 
 function Curse:Run()
-	print("Р—Р°РїСѓСЃРє РїСЂРѕРєР»СЏС‚РёСЏ: "..self.name)
+	print("Запуск проклятия: "..self.name)
 	self.isrunning = true
 end
 
 function Curse:Stop()
-	print("РћСЃС‚Р°РЅРѕРІРєР° РїСЂРѕРєР»СЏС‚РёСЏ: "..self.name)
+	print("Остановка проклятия: "..self.name)
 	self.isrunning = false
 end
 
@@ -53,8 +53,8 @@ end
 
 RotCurse = Class(Curse,function(self)
 	Curse._ctor(self,
-		"Р“РЅРёР»СЊ",
-		"РЈСЃС‚Р°РЅРѕРІР»РµРЅР° С‡СѓРјР°, РІСЃСЏ РµРґР° РіРЅРёС‘С‚..."
+		"Гниль",
+		"Установлена чума, вся еда гниёт..."
 		)
 
 	self.oldrotmultiplier = TUNING.PERISH_GLOBAL_MULT
@@ -78,8 +78,8 @@ ROTCURSE = RotCurse()
 
 InsanityCurse = Class(Curse,function(self)
 	Curse._ctor(self,
-		"Р‘РµР·СѓРјРёРµ",
-		"РЁС‘РїРѕС‚ РЅР° РІРµС‚СЂСѓ РїРѕР»Р·С‘С‚ РїРѕ РІР°С€РµР№ РєРѕР¶Рµ. Р’Р°Рј РєР°Р¶РµС‚СЃСЏ С‡С‚Рѕ РІР°С€Рё РЅРµСЂРІС‹ РёР·РЅР°С€РёРІР°СЋС‚СЃСЏ..."
+		"Безумие",
+		"Шёпот на ветру ползёт по вашей коже. Вам кажется что ваши нервы изнашиваются..."
 		)
 
 	self.TUNING = {}
@@ -110,8 +110,8 @@ INSANITYCURSE = InsanityCurse()
 
 HalfHungerCurse = Class(Curse,function(self)
 	Curse._ctor(self,
-		"РџРѕР»СѓРіРѕР»РѕРґРЅС‹Р№",
-		"РџСЂРµР±С‹РІР°РЅРёРµ РІ РґРёРєРѕР№ РїСЂРёСЂРѕРґРµ СЃР¶Р°Р»Рѕ РІР°С€ Р¶РёРІРѕС‚ РЅР° РїРѕР»РѕРІРёРЅСѓ. Р“РѕСЂРµ РіРѕР»РѕРґРЅС‹Рј."
+		"Полуголодный",
+		"Пребывание в дикой природе сжало ваш живот на половину. Горе голодным."
 		)
 
 	self.hungermax = TUNING.WILSON_HUNGER
@@ -136,8 +136,8 @@ HUNGERCURSE = HalfHungerCurse()
 
 LockedAwayCurse = Class(Curse, function(self)
 	Curse._ctor(self,
-		"Р—Р°РїРµСЂС‚С‹Р№",
-		"РљР°Р¶РµС‚СЃСЏ РІС‹ СѓСЂРѕРЅРёР»Рё РєР»СЋС‡ РѕС‚ РІР°С€РёС… СЃСѓРЅРґСѓРєРѕРІ, РїРѕРєР° РёСЃСЃР»РµРґРѕРІР°Р»Рё РјРµСЃС‚РЅРѕСЃС‚СЊ. Р’С‹ Р±РѕР»СЊС€Рµ РЅРµ РјРѕР¶РµС‚Рµ РѕС‚РєСЂС‹РІР°С‚СЊ РІР°С€Рё СЃСѓРЅРґСѓРєРё."
+		"Запертый",
+		"Кажется вы уронили ключ от ваших сундуков, пока исследовали местность. Вы больше не можете открывать ваши сундуки."
 		)
 end)
 
