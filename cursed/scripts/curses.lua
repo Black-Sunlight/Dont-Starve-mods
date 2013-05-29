@@ -16,21 +16,21 @@ end
 function Curse:BeginCurse()
 	TheFrontEnd:PushScreen(
 		GLOBAL.PopupDialogScreen(
-			"A new curse has befallen you!", 
+			"Новое проклятие постигло вас!", 
 			self.desc,
 			{
-				{text="I ACCEPT!", cb = function() self:Run() end},
-				{text="No! Too hard!", cb = function() end}  
+				{text="Я принимаю!", cb = function() self:Run() end},
+				{text="Нет! Это слишком тяжело!", cb = function() end}  
 			}))
 end
 
 function Curse:Run()
-	print("Running curse: "..self.name)
+	print("Запуск проклятия: "..self.name)
 	self.isrunning = true
 end
 
 function Curse:Stop()
-	print("Stopping curse: "..self.name)
+	print("Остановка проклятия: "..self.name)
 	self.isrunning = false
 end
 
@@ -53,8 +53,8 @@ end
 
 RotCurse = Class(Curse,function(self)
 	Curse._ctor(self,
-		"Rot",
-		"A plague has set, and all the food is rotting away..."
+		"Гниль",
+		"Установлена чума, вся еда гниёт..."
 		)
 
 	self.oldrotmultiplier = TUNING.PERISH_GLOBAL_MULT
@@ -78,8 +78,8 @@ ROTCURSE = RotCurse()
 
 InsanityCurse = Class(Curse,function(self)
 	Curse._ctor(self,
-		"Insanity",
-		"A whisper in the wind is crawling on your skin. You feel your nerves fraying..."
+		"Безумие",
+		"Шёпот на ветру ползёт по вашей коже. Вам кажется что ваши нервы изнашиваются..."
 		)
 
 	self.TUNING = {}
@@ -110,8 +110,8 @@ INSANITYCURSE = InsanityCurse()
 
 HalfHungerCurse = Class(Curse,function(self)
 	Curse._ctor(self,
-		"HalfHunger",
-		"Staying out in the wilderness has shrunken your belly in half. Woe to the hungry."
+		"Полуголодный",
+		"Пребывание в дикой природе сжало ваш живот на половину. Горе голодным."
 		)
 
 	self.hungermax = TUNING.WILSON_HUNGER
@@ -136,8 +136,8 @@ HUNGERCURSE = HalfHungerCurse()
 
 LockedAwayCurse = Class(Curse, function(self)
 	Curse._ctor(self,
-		"LockedAway",
-		"You seemed to have dropped the key to your chests while you were exploring. You can no longer open your chests."
+		"Запертый",
+		"Кажется вы уронили ключ от ваших сундуков, пока исследовали местность. Вы больше не можете открывать ваши сундуки."
 		)
 end)
 
